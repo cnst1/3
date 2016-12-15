@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>ЦНСТ - Бяла Слатина</title>
-    <meta charset="UTF-8">
+    <title>ЦНСТ - Бяла Слатина
+	</title>
+    <meta charset="UTF-8">	
     <!-- Insert to your webpage before the  -->
     <script src="audioplayerengine/jquery.js"></script>
     <script src="audioplayerengine/amazingaudioplayer.js"></script>
     <link rel="stylesheet" type="text/css" href="audioplayerengine/initaudioplayer-1.css">
     <script src="audioplayerengine/initaudioplayer-1.js"></script>
     <!-- End of head section HTML codes -->
-<meta http-equiv=“content-type“ content=“text/html; charset=windows-1251″ />
 <style>
 div.container {
     width: 100%;
@@ -53,7 +53,18 @@ article {
 <div class="container">
 
 <header>
-   <h1>ЦЕНТЪР ЗА НАСТАНЯВАНЕ ОТ СЕМЕЕН ТИП (ЦНСТ)-Бяла Слатина</h1>
+   <h1>ЦЕНТЪР ЗА НАСТАНЯВАНЕ ОТ СЕМЕЕН ТИП (ЦНСТ)-Бяла Слатина</h1>   
+      	    <!-- Insert to your webpage where you want to display the audio player -->
+    <div id="amazingaudioplayer-1" style="display:block;position:relative;width:24px;height:auto;margin:0px auto 0px;">
+        <ul class="amazingaudioplayer-audios" style="display:none;">
+            <li data-artist="リチャード・クレイダーマン" data-title="夢の中のウェディング" data-album="愛の夢～レーヴ・ダムール～" data-info="" data-image="" data-duration="164">
+                <div class="amazingaudioplayer-source" data-src="audios/richard_klajderman_mariage_d_amour_f_shopen_vesennij_val_s (freemp3now.me).mp3" data-type="audio/mpeg" />
+            </li>
+        </ul>
+        <div class="amazingaudioplayer-engine"><a href="http://amazingaudioplayer.com" title="music player for website">html5 audio player</a></div>
+    </div>
+    <!-- End of body section HTML codes -->
+			</script>  
 </header>
   
 <nav>
@@ -118,55 +129,190 @@ function tick()
 
 		lZero(date.getSeconds());
 
-	setTimeout("tick()", 1000);
+	setTimeout("tick()", 500);
 }
 tick();
 			//-->
 			</script>
 	<br>
     <br>
-	    <!-- Insert to your webpage where you want to display the audio player -->
-    <div id="amazingaudioplayer-1" style="display:block;position:relative;width:24px;height:auto;margin:0px auto 0px;">
-        <ul class="amazingaudioplayer-audios" style="display:none;">
-            <li data-artist="リチャード・クレイダーマン" data-title="夢の中のウェディング" data-album="愛の夢～レーヴ・ダムール～" data-info="" data-image="" data-duration="164">
-                <div class="amazingaudioplayer-source" data-src="audios/richard_klajderman_mariage_d_amour_f_shopen_vesennij_val_s (freemp3now.me).mp3" data-type="audio/mpeg" />
-            </li>
-        </ul>
-        <div class="amazingaudioplayer-engine"><a href="http://amazingaudioplayer.com" title="music player for website">html5 audio player</a></div>
-    </div>
-    <!-- End of body section HTML codes -->
 	<br>
-  <br>
-  <br> <br>		
-		<li><a href="index.html">Начало</a></li>
-    <li><a href="za nas.html">За нас</a></li>
+	<br>
+	<br> 
+	<li><a href="index.html">Начало</a></li>
+    <li><a href="zanas.html">За нас</a></li>
     <li><a href="novini.html">Новини</a></li>
 	<li><a href="galeria.html">Галерия</a></li>
-    <li><a href="blagod.html">Благодарности</a></li>
+    <li><a href="blagod.html">Благодарности</a></li>	
+	<br>
+    <br>
+	<br>
+	 <div class="boxcontent" id="dateCell" align="center" style="color : #3C7191; font-weight : bold; font-size : 14; font-family : courier new;"></div>
+
+			<div class="boxcontent" id="clockCell" align="center" style="color : #3C7191; font-weight : bold; font-size : 26; font-family : courier new;"></div>
+
+			<script type="text/javascript">
+
+			<!--
+
+var dateCell = document.getElementById("dateCell");
+
+var clockCell = document.getElementById("clockCell");
+
+var months = new Array(
+
+	"Януари", "Февруари", "Март", 
+
+	"Април", "Май", "Юни", 
+
+	"Юли", "Август", "Септември", 
+
+	"Октомври", "Ноември", "Декември");
+
+var days = new Array(
+
+	"Неделя", "Понеделник", "Вторник", 
+
+	"Сряда", "Четвъртък", "Петък", 
+
+	"Събота");
+
+function lZero(value)
+{
+	if (value < 10)
+	{
+		return "0" + value;
+	}
+	return value;
+}
+function tick()
+{
+	var date = new Date();
+	
+	dateCell.innerHTML = 
+	
+		days[date.getDay()] + "<br />" + 
+
+		lZero(date.getDate()) + "." + 
+
+		months[date.getMonth()] + "." + 
+
+		date.getFullYear();
+
+	clockCell.innerHTML = 
+
+		lZero(date.getHours()) + ":" + 
+
+		lZero(date.getMinutes()) + ":" + 
+
+		lZero(date.getSeconds());
+
+	setTimeout("tick()", 1000);
+}
+tick();
+			//-->
+			</script>
+	 <div class="boxcontent" id="dateCell" align="center" style="color : #3C7191; font-weight : bold; font-size : 14; font-family : courier new;"></div>
+
+			<div class="boxcontent" id="clockCell" align="center" style="color : #3C7191; font-weight : bold; font-size : 26; font-family : courier new;"></div>
+
+			<script type="text/javascript">
+
+			<!--
+
+var dateCell = document.getElementById("dateCell");
+
+var clockCell = document.getElementById("clockCell");
+
+var months = new Array(
+
+	"Януари", "Февруари", "Март", 
+
+	"Април", "Май", "Юни", 
+
+	"Юли", "Август", "Септември", 
+
+	"Октомври", "Ноември", "Декември");
+
+var days = new Array(
+
+	"Неделя", "Понеделник", "Вторник", 
+
+	"Сряда", "Четвъртък", "Петък", 
+
+	"Събота");
+
+function lZero(value)
+{
+	if (value < 10)
+	{
+		return "0" + value;
+	}
+	return value;
+}
+function tick()
+{
+	var date = new Date();
+	
+	dateCell.innerHTML = 
+	
+		days[date.getDay()] + "<br />" + 
+
+		lZero(date.getDate()) + "." + 
+
+		months[date.getMonth()] + "." + 
+
+		date.getFullYear();
+
+	clockCell.innerHTML = 
+
+		lZero(date.getHours()) + ":" + 
+
+		lZero(date.getMinutes()) + ":" + 
+
+		lZero(date.getSeconds());
+
+	setTimeout("tick()", 1000);
+}
+tick();
+			</script>  
+</header>
+<nav>
   </ul>
+  
 </nav>
 
 <article>
-  <h1>Новини</h1>
-  <p></p>
-  <p></p>
+<h1>Коледа в България</h1>  
+<div class="post-body">
+<p><img class="size-full wp-image-54 alignleft" src="5.jpg" alt="" width="1000" height="330" /><br>
+Празникът започва на 24 декември &#8211; Бъдни вечер (Малка Коледа). Из цяла България тръгват коледарите. В коледуванията участват само момчетата. Малките коледарите обикалят през деня на 24 декември. Въоръжени с дрянови тояжки &#8211; коледарки, и с торбички те тропат по вратите, влизат в къщите и пеят: &#8220;Бог се роди, Коледо!&#8221;. Домакинята ги дарява с кравайчета, орехи, парче сланина или кървавица. Възрастните коледари тръгват след вечерята. Събират се на дружини от по десетина души. Един е предводител &#8211; четник или кудабашия, друг е определен за носене на даровете &#8211; той е с дисаги на гърба. Водачът се избира доста преди Коледа. Не може да е кой да е. Трябва да е опитен, да знае коледарската благословия и и всички коледни песни, които на места са до 80 на брой! Коледарите ходят през нощта &#8211; &#8220;не бива слънцето да ги свари по пътищата&#8221;. Те изпяват &#8220;песента за къщата&#8221; &#8211; величаят благосъстоянието на дома, голямата челяд, пожелават здраве. Стопаните ги даряват с коледарски кравай и пари, а също сланина, сирене и други благини. Водачът приема даровете и изказва своята благословия. Разказва за трудния път на дружината до дома, хвали богатата трапеза и даровете и пожелава:</p>
+<p><span style="color: #008000;"><strong>&#8220;Да му дойдат от три страни<br />
+три бъклички-калеснички:<br />
+една &#8211; деца да кръщава<br />
+друга &#8211; булка да венчава<br />
+трета &#8211; булка да прощава.,&#8221;</strong></span><br />
+И винаги:<br />
+<span style="color: #008000;"><strong>&#8220;Речете, дружина, амин!&#8221;</strong></span><br />
+дружината отвръща:<br />
+<span style="color: #008000;"><strong>&#8220;Амин!&#8221;</strong> </span><br />
+Благословията завършва с пожеланието:<br />
+<span style="color: #008000;"><strong>&#8220;Колко звезди по небето,<br />
+толкоз здраве в тази къща!&#8221;</strong></span></p>
+<p>Но ако в някой дом не посрещнат добре коледарите и не ги даруват както подобава, те си отмъщават! Най-често задигат вратницата на двора или някоя кокошка&#8230;</p>
+<p>Девет постни ястия трябва да има на трапезата на Бъдни вечер, когато според библейското предание са почнали мъките на Дева Мария. Главата на семейството разчупва хляба и го раздава на всички. Първото парче е за къщата, второто за домашните животни, останалите се раздават по старшинство. Комуто се падне парата, ще изхранва домочадието през цялата година.</p>
+<p>Някога на Бъдни вечер в огнището се е слагало дебело дърво, което трябвало да гори цяла нощ.</p>
+<p>Коледните празници продължават до Стефанов ден &#8211; 27 декември. През тези дни е грехота да се работи.</p>
+<p>&nbsp;</p>
+<p><img class="size-full wp-image-14 aligncenter"  src="cnst2.jpg" alt="" width="1000" height="500" /></p>
+</div>
+  <p></p>  
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-    <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  
 </article>
 
-<footer>cnst-bs-bg.com</footer>
+<footer>E-mail:dilovska.1981@abv.bg</footer>
 
 </div>
 
